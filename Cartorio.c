@@ -142,6 +142,7 @@ int main () //Cria a função Main, que vai ser referenciada como sendo a principa
  	     printf("\t1 - Registrar Nomes\n");	
  	     printf("\t2 - Consultar Nomes\n");	
  	     printf("\t3 - Deletar Nomes\n\n");	
+ 	     printf("\t4 - Sair do Sistema\n\n");
  	     printf("Opção: ");		
 	
  	     scanf("%d", &opcao); //"escaneia" a tela do usuario esperando ele inserir o valor para a variavel "opcao", sendo "%d" o aviso que a variavel vai receber numeros inteiros
@@ -160,6 +161,11 @@ int main () //Cria a função Main, que vai ser referenciada como sendo a principa
 			  
 			 case 3:
 	     	     deletar();
+		     break;
+		     
+		     case 4:
+		     	printf("Obrigado por Utilizar o sistema!\n");
+		     	return 0;
 		     break;
 		      
 		     default: //Caso o valor dentro tra variavel não corresponda a nenhum caso acima, se executa o codigo abaixo (nesse caso qualquer valor que não seja "1", "2" ou "3"
