@@ -129,53 +129,70 @@ int main () //Cria a função Main, que vai ser referenciada como sendo a principa
 	
  	 int opcao=0; //cria a variavel "opcao", atribui a ela a propriedade de numeros inteiros (int), e nesse caso, insere o valor 0 na variavel pra não deixala vaga para uso
  	 int laco=1;
-	
- 	 for(laco==1;laco==1;) //Cria a condição de gatilho relacionado a uma variavel (no caso "laco==1"),
+ 	 char senhaDigitada[10]="a";
+ 	 int comparacao;
+ 	 
+ 	 printf("\tCartório da EBAC\n\n");	//aonde "\t" centraliza o texto
+ 	 printf("Login de Administrador\n\nDigite a senha de acesso: ");
+ 	 scanf("%s", senhaDigitada);
+ 	 
+ 	 comparacao = strcmp(senhaDigitada, "admin");
+ 	 
+ 	 if(comparacao == 0)
 	  {
+ 	 
+ 	     for(laco==1;laco==1;) //Cria a condição de gatilho relacionado a uma variavel (no caso "laco==1"),
+	      {
 	
-         system ("cls"); //limpa a tela, nesse caso, todo o começo do loop	
+             system ("cls"); //limpa a tela, nesse caso, todo o começo do loop	
 	
- 	     setlocale(LC_ALL, "Portuguese"); 
+ 	         setlocale(LC_ALL, "Portuguese"); 
 	
- 	     printf("\tCartório da EBAC\n\n");	//aonde "\t" centraliza o texto
- 	     printf("Escolha a opção desejada: \n\n");
- 	     printf("\t1 - Registrar Nomes\n");	
- 	     printf("\t2 - Consultar Nomes\n");	
- 	     printf("\t3 - Deletar Nomes\n\n");	
- 	     printf("\t4 - Sair do Sistema\n\n");
- 	     printf("Opção: ");		
+ 	         printf("\tCartório da EBAC\n\n");
+ 	         printf("Escolha a opção desejada: \n\n");
+ 	         printf("\t1 - Registrar Nomes\n");	
+ 	         printf("\t2 - Consultar Nomes\n");	
+ 	         printf("\t3 - Deletar Nomes\n\n");	
+ 	         printf("\t4 - Sair do Sistema\n\n");
+ 	         printf("Opção: ");		
 	
- 	     scanf("%d", &opcao); //"escaneia" a tela do usuario esperando ele inserir o valor para a variavel "opcao", sendo "%d" o aviso que a variavel vai receber numeros inteiros
+ 	         scanf("%d", &opcao); //"escaneia" a tela do usuario esperando ele inserir o valor para a variavel "opcao", sendo "%d" o aviso que a variavel vai receber numeros inteiros
 	
-     	 system("cls"); 
+     	     system("cls"); 
 	
-	     switch(opcao) //Condiciona a execução de uma linha de codigo baseado no valor dentro da variavel entre parênteses (no caso a variavel "opcao")
-	     {
-	     	 case 1: //codigo que sera executado caso o valor dentro da variavel estipulada acima seja correspondente (nesse caso o valor "1")
-	     	     registro(); //chama a uma função, nesse caso a função registro
-		     break; //fecha a condição acima
+	         switch(opcao) //Condiciona a execução de uma linha de codigo baseado no valor dentro da variavel entre parênteses (no caso a variavel "opcao")
+	         {
+	     	     case 1: //codigo que sera executado caso o valor dentro da variavel estipulada acima seja correspondente (nesse caso o valor "1")
+	     	         registro(); //chama a uma função, nesse caso a função registro
+		         break; //fecha a condição acima
 		     
-			 case 2:
-	     	     consulta();
-		     break;
+			     case 2:
+	     	         consulta();
+		         break;
 			  
-			 case 3:
-	     	     deletar();
-		     break;
+			     case 3:
+	     	         deletar();
+		         break;
 		     
-		     case 4:
-		     	printf("Obrigado por Utilizar o sistema!\n");
-		     	return 0;
-		     break;
+		         case 4:
+		     	     printf("Obrigado por Utilizar o sistema!\n");
+		     	     return 0;
+		         break;
 		      
-		     default: //Caso o valor dentro tra variavel não corresponda a nenhum caso acima, se executa o codigo abaixo (nesse caso qualquer valor que não seja "1", "2" ou "3"
-		    	 printf("Opção indisponivel!\n");
-		         system("pause");
-		     break; 
-		 }
+		         default: //Caso o valor dentro tra variavel não corresponda a nenhum caso acima, se executa o codigo abaixo (nesse caso qualquer valor que não seja "1", "2" ou "3"
+		    	     printf("Opção indisponivel!\n");
+		             system("pause");
+		         break; 
+		     }
 	
 
- 	} 
-}
+ 	      } 
+      } 
+	  
+	else
+	  system("cls");
+	  printf("\n\nSenha Incorreta!\n\n");
+      
+    }
 
 
